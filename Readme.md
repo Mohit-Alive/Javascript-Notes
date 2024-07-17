@@ -36,9 +36,9 @@ console.log(null >= 0);     // true
 ### Undefined
 
 ``` javascript
-console.log (undefined == 0);    //false
-console.log (undefined > 0);     //false
-console.log (undefined < 0);     //false
+console.log (undefined == 0);    // false
+console.log (undefined > 0);     // false
+console.log (undefined < 0);     // false
 ```
 
 ## String
@@ -133,7 +133,7 @@ const JsUser = {
 
 console.log(Object.keys(JsUser));      // [ 'name', 'full name', 'age', 'lastLoginDays' ]
 console.log(Object.values(JsUser));    // [ 'Mohit', 'Mohit Kholiya', 20, [ 'Monday', 'Saturday' ] ]
-console.log(Object.entries(JsUser));   // All entries [ 'name', 'Mohit' ], [].....
+console.log(Object.entries(JsUser));   // All entries [ [ 'name', 'Mohit' ], []..... ]
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
