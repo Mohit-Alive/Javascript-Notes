@@ -19,7 +19,7 @@ because of issue in block scope and functional scope
 ``` javascript
 
 console.log(typeof  undefined);   // undefined
-console.log(typeof  null);       // object
+console.log(typeof  null);        // object
 
 ```
 
