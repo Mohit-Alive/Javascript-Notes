@@ -54,24 +54,24 @@ console.log (undefined < 0);     //false
 
 ``` javascript
 const hundreds = 1000000
-console.log(hundreds.toLocaleString());
-console.log(hundreds.toLocaleString('en-IN'));
+console.log(hundreds.toLocaleString());         // 1,000,000
+console.log(hundreds.toLocaleString('en-IN'));  // 10,00,000
 ```
 
 ## Maths
 
 ``` javascript
-console.log(Math);
-console.log(Math.abs(-4));
-console.log(Math.round(4.6));
-console.log(Math.ceil(4.2));
-console.log(Math.floor(4.9));
-console.log(Math.min(4, 3, 6, 8));
-console.log(Math.max(4, 3, 6, 8));
+console.log(Math);                               // Object [Math] {}
+console.log(Math.abs(-4));                       // 4
+console.log(Math.round(4.6));                    // 5
+console.log(Math.ceil(4.2));                     // 5 
+console.log(Math.floor(4.9));                    // 4
+console.log(Math.min(4, 3, 6, 8));               // 3
+console.log(Math.max(4, 3, 6, 8));               // 8
 
-console.log(Math.random());
-console.log((Math.random()*10) + 1);
-console.log(Math.floor(Math.random()*10) + 1);
+console.log(Math.random());                      // 0.9189116621592945
+console.log((Math.random()*10) + 1);             // 6.7671766771352571
+console.log(Math.floor(Math.random()*10) + 1);   // 9
 
 const min = 10
 const max = 20
@@ -88,4 +88,56 @@ console.log(myDate.toString());         // Wed Jul 17 2024 12:14:02 GMT+0530 (In
 console.log(myDate.toDateString());     // 7/17/2024, 12:14:02 PM
 console.log(myDate.toLocaleString());   // 7/17/2024, 12:14:02 PM
 console.log(typeof myDate);             // object
+```
+
+## Arrays
+### Array Methods
+
+* push, pop
+* shift, unshift
+* includes, indexOf
+* join
+* slice, splice
+* concat
+* Array.from() - String to Array
+* Array.of()
+
+``` javascript
+const marvel_heros = ["thor", "Ironman", "spiderman"]
+const dc_heros = ["superman", "flash", "batman"]
+const all_new_heros = [...marvel_heros, ...dc_heros]
+console.log(all_new_heros);
+// [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
+
+console.log(Array.from({name: "Mohit"}))  // [] Empty Array
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score3));
+// [ 100, 200, 300 ]
+```
+
+## Objects
+
+``` javascript
+const mySym = Symbol("key1")
+const JsUser = {
+    name: "Mohit",
+    full_name: "Mohit Kholiya",
+    [mySym]: "mykey1",
+    age: 20,
+    lastLoginDays: ["Monday", "Saturday"]
+}
+
+console.log(Object.keys(JsUser));      // [ 'name', 'full name', 'age', 'lastLoginDays' ]
+console.log(Object.values(JsUser));    // [ 'Mohit', 'Mohit Kholiya', 20, [ 'Monday', 'Saturday' ] ]
+console.log(Object.entries(JsUser));   // All entries [ 'name', 'Mohit' ], [].....
+
+const obj1 = {1: "a", 2: "b"}
+const obj2 = {3: "a", 4: "b"}
+const obj3 = {...obj1, ...obj2}
+console.log(obj3);
+// { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 ```
