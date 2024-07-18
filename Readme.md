@@ -1,5 +1,11 @@
 # Javascript Summary
 
+## Table of Content
+1. [Basics](#variables)
+2. [Arrays](#arrays)
+3. [Objects](#objects)
+4. [Functions](#functions)
+
 ## Variables
 Prefer not to use var
 because of issue in block scope and functional scope
