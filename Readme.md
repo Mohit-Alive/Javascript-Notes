@@ -41,7 +41,7 @@ console.log (undefined > 0);     // false
 console.log (undefined < 0);     // false
 ```
 
-## String
+## Strings
 ### String operations
 
 * slice
@@ -140,4 +140,52 @@ const obj2 = {3: "a", 4: "b"}
 const obj3 = {...obj1, ...obj2}
 console.log(obj3);
 // { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+```
+
+## Functions
+
+### Syntax
+``` JS
+function addTwoNumbers(number1, number2){
+    return number1 + number2
+}
+
+console.log(addone(5))  // Don't show error
+function addone(num){
+    return num + 1
+}
+
+addTwo(5)               // Throw error
+const addTwo = function(num){
+    return num + 2
+}
+```
+
+* addone => Function declarations are hoisted. This means you can call the function before its declaration without any error.
+* addTwo => Only the variable declaration is hoisted, not the function assignment. Thus, calling the function before its definition results in an error.
+
+### Arrow Functions
+
+``` Js
+const addTwo = (num1, num2) => {
+    return num1 + num2
+}
+
+const addTwo = (num1, num2) =>  num1 + num2
+
+const addTwo = (num1, num2) => ( num1 + num2 )
+```
+
+### IIFE - Immediately Invoked Function Expressions
+
+Functions that execute immediately after they are defined.
+``` JS
+(function chai(){
+    // named IIFE
+    console.log(`DB CONNECTED`);
+})();
+
+( (name) => {
+    console.log(`DB CONNECTED TO ${name}`);
+} )('MongoDb')
 ```
