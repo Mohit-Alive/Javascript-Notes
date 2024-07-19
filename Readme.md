@@ -198,14 +198,14 @@ Functions that execute immediately after they are defined.
 
 ## Control flow 
 
-### If-Else-Switch
+* ### If-Else-Switch
 
-We all know the syntax, so lets just skip it.
+* We all know the syntax, so lets just skip it.
 
-### Falsy values 
+* ### Falsy values 
 * false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
-### Truthy values
+* ### Truthy values
 * "0", 'false', " ", [], {}, function(){}
 
 ### Nullish Coalescing Operator (??)
@@ -221,5 +221,102 @@ console.log(val1);
 
 // Terniary Operator
 // condition ? true : false
+```
+
+## Loops - Iterations
+
+### For / While Loops
+
+``` Js
+let myArray = ["flash", "batman", "superman"]
+
+for (let index = 0; index < myArray.length; index++) {
+    const element = myArray[index];
+    console.log(element);
+}
+
+let myArray2 = ['flash', "batman", "superman"]
+
+let arr = 0
+while (arr < myArray2.length) {
+    console.log(`Value is ${myArray2[arr]}`);
+    arr++;
+}
+```
+
+### For of Loops
+
+``` JS
+const arr = [1, 2, 3, 4, 5]
+
+for (const num of arr) {
+    console.log(num);
+}
+
+const greetings = "Hello world!"
+
+for (const greet of greetings) {
+    console.log(`Each char is ${greet}`)
+}
+```
+
+### Maps
+
+```Js
+const map = new Map()
+map.set('IN', "India")
+map.set('USA', "United States of America")
+
+for (const [key, value] of map) {
+    console.log(key, ':-', value);
+}
+
+const myObject = {
+    game1: 'NFS',
+    game2: 'Spiderman'
+}
+
+for (const [key, value] of myObject) {
+    console.log(key, ':-', value);
+}
+```
+
+### For in and For Each Loop
+
+```JS
+const programming = ["js", "rb", "py", "java", "cpp"]
+
+for (const key in programming) {
+    console.log(programming[key]);
+}
+
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+coding.forEach( (item) => {    
+    console.log(item);
+} )
+
+// We can also get item, index , and whole arr
+coding.forEach( (item, index, arr)=> {
+    console.log(item, index, arr);
+} )
+```
+
+## Filter And Reduce
+
+```JS
+// Filter
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newNums = myNums.filter( (num) => {
+    return num > 4
+} )
+console.log(newNums);
+
+//Reduse
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0);
+console.log(myTotal);
 ```
 
