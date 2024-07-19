@@ -5,6 +5,9 @@
 2. [Arrays](#arrays)
 3. [Objects](#objects)
 4. [Functions](#functions)
+5. [Control Flow](#control-flow)
+6. [Loops - Iterations](#loops---iterations)
+7. [Filter and Reduse](#filter-and-reduce)
 
 ## Variables
 Prefer not to use var
