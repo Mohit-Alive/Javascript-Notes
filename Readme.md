@@ -323,3 +323,58 @@ const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0);
 console.log(myTotal);
 ```
 
+## DOM - Document Object Model
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as a tree of nodes, where each node corresponds to a part of the document (such as an element, attribute, or text).
+
+``` JS
+// Example
+
+const parent = document.querySelector('.parent')
+console.log(parent);
+console.log(parent.children);
+console.log(parent.children[1].innerHTML);
+parent.children[1].style.color = "orange";
+```
+
+### Append 
+
+``` Js
+const div = document.createElement('div')
+div.className = "main"
+div.style.backgroundColor = "cyan"
+div.style.color = "black"
+// div.innerText = "Hello , I am Mohit"
+const addText = document.createTextNode("Hello , I am Mohit")
+div.appendChild(addText)
+
+document.body.appendChild(div)
+```
+
+### Add - Edit - Remove
+
+``` Js
+// Add
+function addLanguage(langName){
+    const li = document.createElement('li');
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li)
+}
+addLanguage("python")
+addLanguage("typescript") 
+
+// Edit
+const secondLang = document.querySelector("li:nth-child(2)")
+//secondLang.innerHTML = "Mojo"
+const newli = document.createElement('li')
+newli.textContent = "Mojo"
+secondLang.replaceWith(newli)
+
+// Edit
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML = '<li>TypeScript</li>'
+
+// Remove
+const lastLang = document.querySelector('li:last-child')
+lastLang.remove()
+```
+
