@@ -8,6 +8,7 @@
 5. [Control Flow](#control-flow)
 6. [Loops - Iterations](#loops---iterations)
 7. [Filter and Reduse](#filter-and-reduce)
+8. [Document Object Model](#dom---document-object-model)
 
 ## Variables
 Prefer not to use var
