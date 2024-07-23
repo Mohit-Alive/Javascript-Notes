@@ -378,4 +378,50 @@ firstLang.outerHTML = '<li>TypeScript</li>'
 const lastLang = document.querySelector('li:last-child')
 lastLang.remove()
 ```
+## Events
 
+```JS
+document.getElementById('owl').onclick = function(){
+    alert("owl clicked")
+}
+```
+* type, timestamp, defaultPrevented
+* target, toElement, srcElement, currentTarget,
+* clientX, clientY, screenX, screenY
+* altkey, ctrlkey, shiftkey, keyCode
+
+```JS
+document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside the ul");
+}, false)
+
+document.getElementById('owl').addEventListener('click', function(e){
+    console.log("owl clicked");
+    e.stopPropagation()
+}, false)
+
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault();
+    e.stopPropagation()
+    console.log("google clicked");
+}, false)
+```
+
+### SetTimeout and ClearTimeout
+
+```JS
+const changeMe = setTimeout(changeText, 2000)  // changeText is a function
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log("STOPPED")
+})
+```
+
+### SetInterval and ClearInterval
+
+```JS
+const intervalId = setInterval(sayDate, 1000, "hi")
+
+clearInterval(intervalId)
+```
