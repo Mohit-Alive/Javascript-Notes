@@ -9,6 +9,8 @@
 6. [Loops - Iterations](#loops---iterations)
 7. [Filter and Reduse](#filter-and-reduce)
 8. [Document Object Model](#dom---document-object-model)
+9. [Events](#events)
+10. [API Requests](#api-requests)
 
 ## Variables
 Prefer not to use var
