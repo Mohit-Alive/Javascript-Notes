@@ -1,3 +1,5 @@
+
+
 const promiseOne = new Promise(function(resolve, reject){
     //Do an async task
     // DB calls, cryptography, network
@@ -23,7 +25,7 @@ new Promise(function(resolve, reject){
 
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
-        resolve({username: "Chai", email: "chai@example.com"})
+        resolve({username: "Chai", email: "hello@example.com"})
     }, 1000)
 })
 
@@ -35,7 +37,7 @@ const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = true
         if (!error) {
-            resolve({username: "hitesh", password: "123"})
+            resolve({username: "mohit", password: "123"})
         } else {
             reject('ERROR: Something went wrong')
         }
