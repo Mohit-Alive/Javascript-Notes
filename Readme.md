@@ -11,6 +11,8 @@
 8. [Document Object Model](#dom---document-object-model)
 9. [Events](#events)
 10. [API Requests](#api-requests)
+11. [Promises](#promises)
+12. [Fetch Requests](#fetch-requests)
 
 ## Variables
 Prefer not to use var
