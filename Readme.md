@@ -452,3 +452,69 @@ xhr.onreadystatechange = function(){
 }
 xhr.send();
 ```
+
+## Promises
+
+```JS
+// Promise Creation
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        if (!error) {
+            resolve({username: "javascript", password: "123"})
+        } else {
+            reject('ERROR: JS went wrong')
+        }
+    }, 1000)
+});
+
+// Then catch and finally
+ promiseFour
+ .then((user) => {
+    console.log(user);
+    return user.username
+}).then((username) => {
+    console.log(username);
+}).catch(function(error){
+    console.log(error);
+}).finally(() => console.log("The promise is either resolved or rejected"))
+
+// OR
+// Try and catch
+async function consumePromiseFive(){
+    try {
+        const response = await promiseFive
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+```
+
+## Fetch Requests
+
+```JS
+async function getAllUsers(){
+    try {
+        const response = await fetch('https://api.github.com/users/Mohit-Alive')
+
+        const data = await response.json()
+        console.log(data);
+    } catch (error) {
+        console.log("E: ", error);
+    }
+}
+
+getAllUsers()
+
+// OR
+
+fetch('https://api.github.com/users/Mohit-Alive')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
+```
